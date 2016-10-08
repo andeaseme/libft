@@ -6,7 +6,7 @@
 /*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 12:29:17 by aphan             #+#    #+#             */
-/*   Updated: 2016/09/26 00:55:30 by aphan            ###   ########.fr       */
+/*   Updated: 2016/10/07 17:37:22 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *little,
 		size_t len);
+char				*ft_strrealloc(char *ptr, size_t size);
+
+
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
