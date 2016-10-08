@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/10/07 17:46:13 by aphan            ###   ########.fr        #
+#    Updated: 2016/10/07 18:20:53 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,32 +30,27 @@ SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 		ft_itoa_base.c ft_atoi_base.c ft_strndup.c ft_split_whitespaces.c \
 		ft_print_memory.c ft_islower.c ft_isupper.c ft_isnumber.c ft_isblank.c \
-		ft_strtrimc.c ft_strlcpy.c ft_atol.c
+		ft_strtrimc.c ft_strlcpy.c ft_atol.c ft_strrealloc.c
 
-SRCDIR = ./
 
-OBJ =	$(SRCS: .c=.o)
+OBJ =	$(SRC:.c=.o)
 
-INCDIR =	.
-
-INC = libft.h
+INC = include/
 
 all: $(NAME)
 
 $(NAME):
 		@mkdir -p build/
-		@$(CC) $(CFLAGS) -c $(addprefix $(SRCDIR), $(SRC)) -I$(INC)
+		@$(CC) $(CFLAGS) -c $(addprefix src/, $(SRC)) -I$(INC)
 		@mv $(OBJ) build/
-		ar rc $(NAME) $(addprefix build/ $(OBJ))
+		@ar rc $(NAME) $(addprefix build/, $(OBJ))
 
 clean:
-#		rm -f $(OBJ)
+		@/bin/rm -f $(addprefix build/, $(OBJ))
 
 fclean: clean
-		rm -f $(NAME) 
+		@/bin/rm -f $(NAME) 
 
 re: fclean all
 
-one: re
-#		rm -f $(OBJ)
-#		norminette $(SRC) $(INCNAME)
+.PHONY: all clean fclean re
