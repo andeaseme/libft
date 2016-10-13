@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/10/07 18:20:53 by aphan            ###   ########.fr        #
+#    Updated: 2016/10/13 13:28:13 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 
 OBJ =	$(SRC:.c=.o)
 
-INC = include/
+INC = includes/
 
 all: $(NAME)
 
