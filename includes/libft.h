@@ -6,7 +6,7 @@
 /*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 12:29:17 by aphan             #+#    #+#             */
-/*   Updated: 2016/10/07 17:37:22 by aphan            ###   ########.fr       */
+/*   Updated: 2016/10/14 20:43:20 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_isnumber(int c);
 int					ft_isblank(int c);
+int					ft_power(int nb, int power);
 char				*ft_strtrimc(char const *s, char c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 long				ft_atol(const char *str);
