@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/10/14 20:42:13 by aphan            ###   ########.fr        #
+#    Updated: 2016/10/21 20:58:31 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,8 @@ SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 		ft_itoa_base.c ft_atoi_base.c ft_strndup.c ft_split_whitespaces.c \
 		ft_print_memory.c ft_islower.c ft_isupper.c ft_isnumber.c ft_isblank.c \
-		ft_strtrimc.c ft_strlcpy.c ft_atol.c ft_strrealloc.c ft_power.c
-
+		ft_strtrimc.c ft_strlcpy.c ft_atol.c ft_strrealloc.c ft_power.c \
+		get_next_line.c
 
 OBJ =	$(SRC:.c=.o)
 
