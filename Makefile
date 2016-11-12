@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/11/12 11:46:34 by aphan            ###   ########.fr        #
+#    Updated: 2016/11/12 11:56:54 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ NAME =	libft.a
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
+
+PRINTF_CFLAGS = -Wno-varargs -Wall -Wextra -Werror
 
 INC = includes/
 
@@ -50,8 +52,8 @@ all: $(NAME)
 
 $(NAME):
 		@mkdir -p build/
-		@$(CC) $(CFLAGS) -c $(addprefix $(SRC_DIR), $(SRC)) \
-			$(addprefix $(PRINTF_DIR), $(PRINTF_SRC)) -I$(INC)
+		@$(CC) $(CFLAGS) -c $(addprefix $(SRC_DIR), $(SRC)) -I$(INC)
+		@$(CC) $(PRINTF_CFLAGS) -c $(addprefix $(PRINTF_DIR), $(PRINTF_SRC)) -I$(INC)
 		@mv $(OBJ) build/
 		@ar rc $(NAME) $(addprefix build/, $(OBJ))
 
