@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/10/21 20:58:31 by aphan            ###   ########.fr        #
+#    Updated: 2016/11/12 11:46:34 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 INC = includes/
+
+SRC_DIR = src/
 
 SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_isdigit.c ft_isprint.c ft_memccpy.c ft_memchr.c ft_memcmp.c \
@@ -35,13 +37,21 @@ SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_strtrimc.c ft_strlcpy.c ft_atol.c ft_strrealloc.c ft_power.c \
 		get_next_line.c
 
-OBJ =	$(SRC:.c=.o)
+PRINTF_DIR =	src/ft_printf/
+
+PRINTF_SRC = 	ft_printf.c pf_parse.c pf_ismodifier.c pf_s.c pf_d.c pf_u.c \
+				pf_p.c pf_o.c pf_x.c pf_c.c pf_b.c
+
+OBJ_DIR = build/
+
+OBJ =	$(SRC:.c=.o) $(PRINTF_SRC:.c=.o) 
 
 all: $(NAME)
 
 $(NAME):
 		@mkdir -p build/
-		@$(CC) $(CFLAGS) -c $(addprefix src/, $(SRC)) -I$(INC)
+		@$(CC) $(CFLAGS) -c $(addprefix $(SRC_DIR), $(SRC)) \
+			$(addprefix $(PRINTF_DIR), $(PRINTF_SRC)) -I$(INC)
 		@mv $(OBJ) build/
 		@ar rc $(NAME) $(addprefix build/, $(OBJ))
 
