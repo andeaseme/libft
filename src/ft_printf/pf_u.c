@@ -6,7 +6,7 @@
 /*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 13:08:10 by aphan             #+#    #+#             */
-/*   Updated: 2016/11/06 19:41:03 by aphan            ###   ########.fr       */
+/*   Updated: 2016/11/12 16:20:55 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ uintmax_t	pf_u_cast(va_list ap, int length, int base, int *len)
 	else if (!(length % 5))
 		a = va_arg(ap, uintmax_t);
 	else if (!(length % 11))
-		a = va_arg(ap, unsigned char);
+		a = va_arg(ap, unsigned int);
 	else if (!(length % 2))
-		a = va_arg(ap, unsigned short int);
+		a = va_arg(ap, unsigned int);
 	else
 		*len = -1;
 	if (*len != -1)

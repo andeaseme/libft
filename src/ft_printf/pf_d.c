@@ -6,7 +6,7 @@
 /*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/28 13:08:10 by aphan             #+#    #+#             */
-/*   Updated: 2016/11/07 00:02:47 by aphan            ###   ########.fr       */
+/*   Updated: 2016/11/12 16:19:59 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ static intmax_t	pf_d_cast(va_list ap, int length, int *len)
 	else if (!(length % 5))
 		a = va_arg(ap, intmax_t);
 	else if (!(length % 11))
-		a = va_arg(ap, signed char);
+		a = va_arg(ap, int);
 	else if (!(length % 2))
-		a = va_arg(ap, short int);
+		a = va_arg(ap, int);
 	else
 		*len = -1;
 	if (*len != -1)
