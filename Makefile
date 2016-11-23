@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/11/12 16:24:43 by aphan            ###   ########.fr        #
+#    Updated: 2016/11/22 21:46:16 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_itoa_base.c ft_atoi_base.c ft_strndup.c ft_split_whitespaces.c \
 		ft_print_memory.c ft_islower.c ft_isupper.c ft_isnumber.c ft_isblank.c \
 		ft_strtrimc.c ft_strlcpy.c ft_atol.c ft_strrealloc.c ft_power.c \
-		get_next_line.c
+		get_next_line.c ft_intswap.c ft_lstdup.c ft_lstclr.c
 
 PRINTF_DIR =	src/ft_printf/
 
