@@ -6,7 +6,7 @@
 /*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 12:29:17 by aphan             #+#    #+#             */
-/*   Updated: 2016/12/22 14:22:41 by aphan            ###   ########.fr       */
+/*   Updated: 2016/12/22 14:49:44 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define MAX(a, b) (((a) > (b)) ? (a) : (b))
 # define MIN(a, b) (((a) < (b)) ? (a) : (b))
 # define ABS(a) ((a < 0) ? (-a) : (a))
+# define SIGN(a) ((a < 0) ? (-1) : (a > 0) ? 1 : 0)
 # define SWAP(a, b) {typeof(a) temp = a; a = b; b = temp;}
 
 typedef struct		s_list

@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/12/22 14:25:10 by aphan            ###   ########.fr        #
+#    Updated: 2016/12/22 14:31:50 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c \
 		ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_putchar.c ft_putstr.c \
 		ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \
-		ft_putendl_fd.c ft_putnbr_fd.c 	 ft_itoa.c ft_lstnew.c ft_lstdelone.c \
+		ft_putendl_fd.c ft_putnbr_fd.c ft_itoa.c ft_lstnew.c ft_lstdelone.c \
 		ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 		ft_itoa_base.c ft_atoi_base.c ft_strndup.c ft_split_whitespaces.c \
 		ft_islower.c ft_isupper.c ft_isnumber.c ft_isblank.c \
