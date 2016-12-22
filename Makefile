@@ -6,7 +6,7 @@
 #    By: aphan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2016/11/22 21:46:16 by aphan            ###   ########.fr        #
+#    Updated: 2016/12/22 14:25:10 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,10 @@ SRC =	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_putendl_fd.c ft_putnbr_fd.c 	 ft_itoa.c ft_lstnew.c ft_lstdelone.c \
 		ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 		ft_itoa_base.c ft_atoi_base.c ft_strndup.c ft_split_whitespaces.c \
-		ft_print_memory.c ft_islower.c ft_isupper.c ft_isnumber.c ft_isblank.c \
+		ft_islower.c ft_isupper.c ft_isnumber.c ft_isblank.c \
 		ft_strtrimc.c ft_strlcpy.c ft_atol.c ft_strrealloc.c ft_power.c \
-		get_next_line.c ft_intswap.c ft_lstdup.c ft_lstclr.c
+		get_next_line.c ft_intswap.c ft_lstdup.c ft_lstclr.c ft_findint.c \
+		ft_isintstr.c ft_isnbrstr.c ft_quicksort.c
 
 PRINTF_DIR =	src/ft_printf/
 
@@ -53,16 +54,16 @@ $(NAME):
 		@$(CC) $(CFLAGS) -c $(addprefix $(SRC_DIR), $(SRC)) \
 			$(addprefix $(PRINTF_DIR), $(PRINTF_SRC)) -I$(INC)
 		@mv $(OBJ) build/
-		@ar rc $(NAME) $(addprefix build/, $(OBJ))
-		@echo 'compile'
+		@ar rc $(NAME) $(addprefix $(OBJ_DIR), $(OBJ))
+		@echo 'compile libft.a'
 
 clean:
-		@/bin/rm -f $(addprefix build/, $(OBJ))
-		@echo 'clean objects'
+		@/bin/rm -f $(addprefix $(OBJ_DIR), $(OBJ))
+		@echo 'clean libft objects'
 
 fclean: clean
 		@/bin/rm -f $(NAME) 
-		@echo 'clean library'
+		@echo 'clean libft.a'
 
 re: fclean all
 

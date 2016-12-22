@@ -6,7 +6,7 @@
 /*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 12:29:17 by aphan             #+#    #+#             */
-/*   Updated: 2016/11/22 21:52:54 by aphan            ###   ########.fr       */
+/*   Updated: 2016/12/22 14:22:41 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,25 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *lit, size_t len);
 char				*ft_strrealloc(char *ptr, size_t size);
-
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+
 int					ft_atoi(const char *str);
+
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_islower(int c);
+int					ft_isupper(int c);
+int					ft_isnumber(int c);
+int					ft_isblank(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_isnbrstr(char *str);
+int					ft_isintstr(char *str);
+int					ft_findint(int *array, size_t size, int findme);
 
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
@@ -98,14 +106,10 @@ char				*ft_itoa_base(int value, int base);
 int					ft_atoi_base(const char *str, int str_base);
 char				*ft_strndup(const char *s1, size_t n);
 char				**ft_split_whitespaces(char *s);
-void				ft_print_memory(const void *addr, size_t size);
-int					ft_islower(int c);
-int					ft_isupper(int c);
-int					ft_isnumber(int c);
-int					ft_isblank(int c);
 int					ft_power(int nb, int power);
 char				*ft_strtrimc(char const *s, char c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 long				ft_atol(const char *str);
 void				ft_intswap(int *a, int *b);
+void				ft_quicksort(int arr[], int low, int high);
 #endif
