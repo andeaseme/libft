@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split_whitespaces.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 21:51:59 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/25 22:03:54 by aphan            ###   ########.fr       */

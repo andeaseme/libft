@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isintstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/03 14:47:04 by aphan             #+#    #+#             */
 /*   Updated: 2016/12/03 14:56:06 by aphan            ###   ########.fr       */

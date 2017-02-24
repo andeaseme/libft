@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 19:35:54 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/25 23:33:59 by aphan            ###   ########.fr       */

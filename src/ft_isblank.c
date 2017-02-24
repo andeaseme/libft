@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isblank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 22:50:15 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/25 23:09:33 by aphan            ###   ########.fr       */

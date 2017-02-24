@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 23:36:02 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/23 23:36:06 by aphan            ###   ########.fr       */

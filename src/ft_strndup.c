@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/25 21:32:34 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/25 21:42:20 by aphan            ###   ########.fr       */

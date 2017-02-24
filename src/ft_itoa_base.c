@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/25 09:03:56 by exam              #+#    #+#             */
 /*   Updated: 2016/11/12 11:30:24 by aphan            ###   ########.fr       */

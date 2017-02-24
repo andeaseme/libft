@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_quicksort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 22:18:50 by aphan             #+#    #+#             */
 /*   Updated: 2016/12/09 22:55:27 by aphan            ###   ########.fr       */

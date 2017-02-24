@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 12:29:17 by aphan             #+#    #+#             */
-/*   Updated: 2016/12/22 14:49:44 by aphan            ###   ########.fr       */
+/*   Updated: 2017/02/06 01:46:17 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 # define MAX(a, b) (((a) > (b)) ? (a) : (b))
 # define MIN(a, b) (((a) < (b)) ? (a) : (b))
@@ -30,6 +31,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);

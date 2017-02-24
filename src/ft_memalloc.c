@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 12:56:59 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/25 21:25:29 by aphan            ###   ########.fr       */

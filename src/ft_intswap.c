@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_intswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 21:34:05 by aphan             #+#    #+#             */
 /*   Updated: 2016/11/22 21:38:05 by aphan            ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_findint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/03 15:17:21 by aphan             #+#    #+#             */
 /*   Updated: 2016/12/03 15:18:37 by aphan            ###   ########.fr       */

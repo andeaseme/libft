@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/07 17:15:44 by aphan             #+#    #+#             */
 /*   Updated: 2016/10/07 17:36:30 by aphan            ###   ########.fr       */

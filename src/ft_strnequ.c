@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 14:31:16 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/24 21:39:03 by aphan            ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aphan <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/23 13:42:06 by aphan             #+#    #+#             */
 /*   Updated: 2016/09/25 16:34:04 by aphan            ###   ########.fr       */
