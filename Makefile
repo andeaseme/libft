@@ -6,7 +6,7 @@
 #    By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2017/02/24 13:51:03 by aphan            ###   ########.fr        #
+#    Updated: 2017/02/24 14:09:33 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ _OBJ =	ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 		ft_islower.o ft_isupper.o ft_isnumber.o ft_isblank.o \
 		ft_strtrimc.o ft_strlcpy.o ft_atol.o ft_strrealloc.o ft_power.o \
 		get_next_line.o ft_intswap.o ft_lstdup.o ft_lstclr.o ft_findint.o \
-		ft_isintstr.o ft_isnbrstr.o ft_quicksort.o
+		ft_isintstr.o ft_isnbrstr.o ft_quicksort.o ft_realloc.o
 
 _PRINTF_OBJ = 	ft_printf.o pf_parse.o pf_ismodifier.o pf_s.o pf_d.o pf_u.o \
 				pf_p.o pf_o.o pf_x.o pf_c.o pf_b.o
