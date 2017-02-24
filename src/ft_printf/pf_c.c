@@ -6,7 +6,7 @@
 /*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 20:22:38 by aphan             #+#    #+#             */
-/*   Updated: 2016/11/12 16:21:26 by aphan            ###   ########.fr       */
+/*   Updated: 2016/11/06 15:47:44 by aphan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	*pf_c_cast(va_list ap, int length, int *len, int spec)
 	if (spec == 14 && (*len = 1))
 		a[0] = 37;
 	else if (length == 1 && (*len = 1))
-		a[0] = va_arg(ap, int);
+		a[0] = va_arg(ap, char);
 	else if (length == 3)
 		*len = pf_wctoc(va_arg(ap, wchar_t), a);
 	return (a);

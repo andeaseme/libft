@@ -6,7 +6,7 @@
 #    By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2017/02/23 21:32:12 by aphan            ###   ########.fr        #
+#    Updated: 2017/02/24 13:51:03 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,11 @@ OBJ :=	$(addprefix $(ODIR)/,$(_OBJ)) \
 
 all: $(NAME)
 
-$(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
+$(ODIR)/%.o: $(SDIR)/%.c  $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
 
 $(ODIR)/%.o: $(PRINTF_SDIR)/%.c $(DEPS)
-		$(CC) -c -o $@ $< $(CFLAGS)
+		$(CC) -c -o $@ $< $(CFLAGS) -Wno-varargs
 
 $(OBJ): | $(ODIR)
 
