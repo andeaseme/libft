@@ -6,7 +6,7 @@
 #    By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/22 13:26:36 by aphan             #+#    #+#              #
-#    Updated: 2017/02/24 14:09:33 by aphan            ###   ########.fr        #
+#    Updated: 2017/02/25 20:59:06 by aphan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ CFLAGS = -I $(IDIR) -Wall -Wextra -Werror
 ODIR := obj
 SDIR = src
 PRINTF_SDIR =	$(SDIR)/ft_printf
+GRAPH_SDIR =	$(SDIR)/graph
 
 _DEPS = libft.h get_next_line.h ft_printf.h
 DEPS = $(addprefix $(IDIR)/,$(_DEPS))
@@ -41,24 +42,30 @@ _OBJ =	ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 		get_next_line.o ft_intswap.o ft_lstdup.o ft_lstclr.o ft_findint.o \
 		ft_isintstr.o ft_isnbrstr.o ft_quicksort.o ft_realloc.o
 
-_PRINTF_OBJ = 	ft_printf.o pf_parse.o pf_ismodifier.o pf_s.o pf_d.o pf_u.o \
+_PRINTF_OBJ =	ft_printf.o pf_parse.o pf_ismodifier.o pf_s.o pf_d.o pf_u.o \
 				pf_p.o pf_o.o pf_x.o pf_c.o pf_b.o
 
+_GRAPH_OBJ =	graph_add_edge.o graph_destroy.o search_dfs_bfs.o \
+				graph_count.o graph_foreach.o search_info_create.o \
+				graph_create.o graph_has_edge.o search_info_destroy.o
+
 OBJ :=	$(addprefix $(ODIR)/,$(_OBJ)) \
-		$(addprefix $(ODIR)/,$(_PRINTF_OBJ))
+		$(addprefix $(ODIR)/,$(_PRINTF_OBJ)) \
+		$(addprefix $(ODIR)/,$(_GRAPH_OBJ))
 
 all: $(NAME)
 
-$(ODIR)/%.o: $(SDIR)/%.c  $(DEPS)
+$(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
-
 $(ODIR)/%.o: $(PRINTF_SDIR)/%.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS) -Wno-varargs
+$(ODIR)/%.o: $(GRAPH_SDIR)/%.c $(DEPS)
+		$(CC) -c -o $@ $< $(CFLAGS)
 
 $(OBJ): | $(ODIR)
 
 $(ODIR):
-		mkdir -p $(ODIR)
+		mkdir -p $@
 		@echo 'make directory obj'
 
 $(NAME): $(OBJ)
