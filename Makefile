@@ -20,6 +20,7 @@ ODIR := obj
 SDIR = src
 PRINTF_SDIR =	$(SDIR)/ft_printf
 GRAPH_SDIR =	$(SDIR)/graph
+UTILITY_SDIR =	$(SDIR)/utility
 
 _DEPS = libft.h get_next_line.h ft_printf.h
 DEPS = $(addprefix $(IDIR)/,$(_DEPS))
@@ -49,9 +50,12 @@ _GRAPH_OBJ =	graph_add_edge.o graph_destroy.o search_dfs_bfs.o \
 				graph_count.o graph_foreach.o search_info_create.o \
 				graph_create.o graph_has_edge.o search_info_destroy.o
 
+_UTILITY_OBJ = 	ft_option128.o
+
 OBJ :=	$(addprefix $(ODIR)/,$(_OBJ)) \
 		$(addprefix $(ODIR)/,$(_PRINTF_OBJ)) \
-		$(addprefix $(ODIR)/,$(_GRAPH_OBJ))
+		$(addprefix $(ODIR)/,$(_GRAPH_OBJ)) \
+		$(addprefix $(ODIR)/,$(_UTILITY_OBJ))
 
 all: $(NAME)
 
@@ -60,6 +64,8 @@ $(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
 $(ODIR)/%.o: $(PRINTF_SDIR)/%.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS) -Wno-varargs
 $(ODIR)/%.o: $(GRAPH_SDIR)/%.c $(DEPS)
+		$(CC) -c -o $@ $< $(CFLAGS)
+$(ODIR)/%.o: $(UTILITY_SDIR)/%.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
 
 $(OBJ): | $(ODIR)

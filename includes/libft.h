@@ -18,11 +18,19 @@
 # include <unistd.h>
 # include <limits.h>
 
-# define MAX(a, b) (((a) > (b)) ? (a) : (b))
-# define MIN(a, b) (((a) < (b)) ? (a) : (b))
-# define ABS(a) ((a < 0) ? (-a) : (a))
-# define SIGN(a) ((a < 0) ? (-1) : (a > 0) ? 1 : 0)
-# define SWAP(a, b) {typeof(a) temp = a; a = b; b = temp;}
+# define MAX(a, b)		(((a) > (b)) ? (a) : (b))
+# define MIN(a, b)		(((a) < (b)) ? (a) : (b))
+# define ABS(a)			((a < 0) ? (-a) : (a))
+# define SIGN(a)		((a < 0) ? (-1) : (a > 0) ? 1 : 0)
+# define SWAP(a, b)		{typeof(a) temp = a; a = b; b = temp;}
+
+/*
+** Bit Array Ops
+*/
+
+# define SETBIT(A,k)	(A[(k/32)] |= (1 << (k%32)))
+# define CLEARBIT(A,k)	(A[(k/32)] &= ~(1 << (k%32)))
+# define TESTBIT(A,k)	(A[(k/32)] & (1 << (k%32)))
 
 typedef struct		s_list
 {
@@ -116,4 +124,6 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 long				ft_atol(const char *str);
 void				ft_intswap(int *a, int *b);
 void				ft_quicksort(int arr[], int low, int high);
+
+int     			*ft_option128(int ac, char **av);
 #endif
