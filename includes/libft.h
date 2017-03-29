@@ -60,7 +60,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *lit, size_t len);
 char				*ft_strrealloc(char *ptr, size_t size);
-int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strcmp(const void *s1, const void *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int					ft_atoi(const char *str);
@@ -123,7 +123,10 @@ char				*ft_strtrimc(char const *s, char c);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 long				ft_atol(const char *str);
 void				ft_intswap(int *a, int *b);
-void				ft_quicksort(int arr[], int low, int high);
 
-int     			*ft_option128(int ac, char **av);
+void				ft_quicksort_int(int arr[], int low, int high);
+void				ft_quicksort(void *arr[], int low, int high,
+							int (*cmp)(const void *, const void *));
+
+int     			*ft_option128(int *ac, char ***av);
 #endif

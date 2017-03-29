@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_quicksort.c                                     :+:      :+:    :+:   */
+/*   ft_quicksort_int.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aphan <aphan@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -34,14 +34,14 @@ static int	qs_partition(int arr[], int low, int high)
 	return (i);
 }
 
-void		ft_quicksort(int arr[], int low, int high)
+void		ft_quicksort_int(int arr[], int low, int high)
 {
 	int pi;
 
 	if (low < high)
 	{
 		pi = qs_partition(arr, low, high);
-		ft_quicksort(arr, low, pi - 1);
-		ft_quicksort(arr, pi + 1, high);
+		ft_quicksort_int(arr, low, pi - 1);
+		ft_quicksort_int(arr, pi + 1, high);
 	}
 }

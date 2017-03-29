@@ -12,26 +12,36 @@
 
 #include "libft.h"
 
-int		*ft_option128(int ac, char **av)
+/*
+**	Returns a bit array flagging all options. 
+**	Decrements 'argc' and increments 'argv' for each options.
+**	'argv[1]' will always be the first 'argv' after options
+**	similar to having no options.
+*/
+
+int		*ft_option128(int *ac, char ***av)
 {
 	int		i;
 	int		j;
 	int		*op;
 
 	i = 0;
-	op = (int *)malloc(sizeof(int) * 5);
+	op = (int *)malloc(sizeof(int) * 4);
 	while (i < 4)
 		op[i++] = 0;
-	if (ac > 1 && op)
+	if (*ac > 1 && op)
 	{
-		i = 0;
-		while (++i < ac && av[i][0] == '-' && av[i][1])
+		while (*(*av + 1) && (*(*av + 1))[0] == '-' && (*(*av + 1))[1] != 0)
 		{
+			(*ac)--;
+			(*av)++;
 			j = 1;
-			while (av[i][j] > 0 && av[i][j] <= 127)
-				SETBIT(op, (int)av[i][j]);
+			while ((**av)[j] > 0 && (**av)[j] <= 127)
+			{
+				SETBIT(op, (int)(**av)[j]);
+				j++;
+			}
 		}
 	}
-	op[5] = i;
 	return (op);
 }
