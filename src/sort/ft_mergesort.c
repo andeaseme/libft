@@ -72,7 +72,7 @@ void			ft_mergesort(t_list **source,
 	t_list	*b;
 
 	head = *source;
-	if ((head == NULL) || (head->next == NULL))
+	if ((head == NULL) || (head->next == NULL) || (cmp == NULL))
 	{
 		return ;
 	}

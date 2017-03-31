@@ -40,7 +40,7 @@ void		ft_quicksort(void *arr[], int low, int high,
 {
 	int piv;
 
-	if (low < high)
+	if (cmp && low < high)
 	{
 		piv = qs_partition(arr, low, high, cmp);
 		ft_quicksort(arr, low, piv - 1, cmp);
