@@ -109,10 +109,12 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstadd_after(t_list *prev_node, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstdup(t_list *lst, size_t size);
 t_list				*ft_lstclr(t_list **head);
+void				ft_lstfree(t_list **alst);
 
 char				*ft_itoa_base(int value, int base);
 int					ft_atoi_base(const char *str, int str_base);
@@ -127,6 +129,9 @@ void				ft_intswap(int *a, int *b);
 void				ft_quicksort_int(int arr[], int low, int high);
 void				ft_quicksort(void *arr[], int low, int high,
 							int (*cmp)(const void *, const void *));
+void            	ft_mergesort_int(t_list **source);
+void				ft_mergesort(t_list **source,
+							int (*cmp)(const t_list *a, const t_list *b));
 
 int     			*ft_option128(int *ac, char ***av);
 #endif
