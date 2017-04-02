@@ -43,7 +43,7 @@ _OBJ =	ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 		ft_strtrimc.o ft_strlcpy.o ft_atol.o ft_strrealloc.o ft_power.o \
 		get_next_line.o ft_intswap.o ft_lstdup.o ft_lstclr.o ft_findint.o \
 		ft_isintstr.o ft_isnbrstr.o ft_realloc.o ft_lstadd_after.o \
-		ft_lstfree.o ft_strcat_multi.o
+		ft_lstfree.o ft_strcat_multi.o ft_memdup.o
 
 _PRINTF_OBJ =	ft_printf.o pf_parse.o pf_ismodifier.o pf_s.o pf_d.o pf_u.o \
 				pf_p.o pf_o.o pf_x.o pf_c.o pf_b.o
