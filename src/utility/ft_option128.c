@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_printf.h"
 
 /*
 **	Returns a bit array flagging all options. 
@@ -19,12 +20,23 @@
 **	similar to having no options.
 */
 
-int		*ft_option128(int *ac, char ***av)
+static void	op128_illegal(char *file, char *ops, char *usage, char c)
+{
+	ft_printf("%s: illegal option -- %c\n"
+		"usage: %s [-%s] [%s]\n",
+		file, c, 
+		file, ops, usage);
+	exit (0);
+}
+
+int			*ft_option128(int *ac, char ***av, char *valid_ops, char *usage_in)
 {
 	int		i;
 	int		j;
 	int		*op;
+	char	*filename;
 
+	filename = ft_strrchr(*av[0], '/') + 1;
 	i = 0;
 	op = (int *)malloc(sizeof(int) * 4);
 	while (i < 4)
@@ -35,11 +47,12 @@ int		*ft_option128(int *ac, char ***av)
 		{
 			(*ac)--;
 			(*av)++;
-			j = 1;
-			while ((**av)[j] > 0 && (**av)[j] <= 127)
+			j = 0;
+			while (++j && (**av)[j] > 0 && (**av)[j] <= 127)
 			{
+				if (valid_ops && !ft_strchr(valid_ops, (int)(**av)[j]))
+					op128_illegal(filename, valid_ops, usage_in, (**av)[j]);
 				SETBIT(op, (int)(**av)[j]);
-				j++;
 			}
 		}
 	}

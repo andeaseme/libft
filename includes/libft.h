@@ -135,5 +135,6 @@ void            	ft_mergesort_int(t_list **source);
 void				ft_mergesort(t_list **source,
 							int (*cmp)(const t_list *a, const t_list *b));
 
-int     			*ft_option128(int *ac, char ***av);
+int     			*ft_option128(int *ac, char ***av, 
+							char *valid_ops, char *usage_input);
 #endif
