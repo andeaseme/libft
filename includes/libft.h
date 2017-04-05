@@ -133,10 +133,10 @@ void				ft_intswap(int *a, int *b);
 void				ft_quicksort_int(int arr[], int low, int high);
 void				ft_quicksort(void *arr[], int low, int high,
 							int (*cmp)(const void *, const void *));
-void            	ft_mergesort_int(t_list **source);
+void				ft_mergesort_int(t_list **source);
 void				ft_mergesort(t_list **source,
 							int (*cmp)(const t_list *a, const t_list *b));
 
-int     			*ft_option128(int *ac, char ***av, 
+int					*ft_option128(int *ac, char ***av,
 							char *valid_ops, char *usage_input);
 #endif

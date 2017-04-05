@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/*	
+/*
 **	This function will concatenate a series of strings
 **	to form a result string.  A sentinel value of NULL
 **	should be placed at the end of the list of strings.
@@ -34,7 +34,7 @@ char	*ft_strcat_multi(char *result, char *string1, ...)
 		while (str[i])
 			result[len++] = str[i++];
 		result[len] = 0;
-		str = va_arg(args,char *);
+		str = va_arg(args, char *);
 	}
 	va_end(args);
 	return (result);

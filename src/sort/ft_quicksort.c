@@ -17,7 +17,7 @@ static int	qs_partition(void *arr[], int low, int high,
 {
 	void	*pivot;
 	int		i;
-	int 	j;
+	int		j;
 
 	pivot = arr[high];
 	i = low;

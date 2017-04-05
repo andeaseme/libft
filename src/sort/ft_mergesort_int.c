@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-static t_list*	ms_lstmerge(t_list *a, t_list *b)
+static t_list	*ms_lstmerge(t_list *a, t_list *b)
 {
-	t_list*	result;
+	t_list	*result;
 
 	result = NULL;
 	if (a == NULL)
-		return(b);
-	else if (b==NULL)
-		return(a);
+		return (b);
+	else if (b == NULL)
+		return (a);
 	if ((int)a->content <= (int)b->content)
 	{
 		result = a;
@@ -31,7 +31,7 @@ static t_list*	ms_lstmerge(t_list *a, t_list *b)
 		result = b;
 		result->next = ms_lstmerge(a, b->next);
 	}
-	return(result);
+	return (result);
 }
 
 static void		ms_partition(t_list *head, t_list **front, t_list **back)
@@ -39,7 +39,7 @@ static void		ms_partition(t_list *head, t_list **front, t_list **back)
 	t_list	*fast;
 	t_list	*slow;
 
-	if (head==NULL || head->next==NULL)
+	if (head == NULL || head->next == NULL)
 	{
 		*front = head;
 		*back = NULL;
@@ -74,7 +74,7 @@ void			ft_mergesort_int(t_list **source)
 	{
 		return ;
 	}
-	ms_partition(head, &a, &b); 
+	ms_partition(head, &a, &b);
 	ft_mergesort_int(&a);
 	ft_mergesort_int(&b);
 	*source = ms_lstmerge(a, b);

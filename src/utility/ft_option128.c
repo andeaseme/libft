@@ -14,7 +14,7 @@
 #include "ft_printf.h"
 
 /*
-**	Returns a bit array flagging all options. 
+**	Returns a bit array flagging all options.
 **	Decrements 'argc' and increments 'argv' for each options.
 **	'argv[1]' will always be the first 'argv' after options
 **	similar to having no options.
@@ -24,9 +24,9 @@ static void	op128_illegal(char *file, char *ops, char *usage, char c)
 {
 	ft_printf("%s: illegal option -- %c\n"
 		"usage: %s [-%s] [%s]\n",
-		file, c, 
+		file, c,
 		file, ops, usage);
-	exit (0);
+	exit(1);
 }
 
 int			*ft_option128(int *ac, char ***av, char *valid_ops, char *usage_in)
@@ -38,16 +38,15 @@ int			*ft_option128(int *ac, char ***av, char *valid_ops, char *usage_in)
 
 	filename = ft_strrchr(*av[0], '/') + 1;
 	i = 0;
-	op = (int *)malloc(sizeof(int) * 4);
-	while (i < 4)
-		op[i++] = 0;
-	if (*ac > 1 && op)
+	if ((op = (int *)ft_strnew(sizeof(int) * 4 - 1)) && *ac > 1)
 	{
 		while (*(*av + 1) && (*(*av + 1))[0] == '-' && (*(*av + 1))[1] != 0)
 		{
 			(*ac)--;
 			(*av)++;
 			j = 0;
+			if (!ft_strcmp(**av, "--"))
+				break ;
 			while (++j && (**av)[j] > 0 && (**av)[j] <= 127)
 			{
 				if (valid_ops && !ft_strchr(valid_ops, (int)(**av)[j]))
