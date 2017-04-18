@@ -22,6 +22,7 @@ PRINTF_SDIR =	$(SDIR)/ft_printf
 GRAPH_SDIR =	$(SDIR)/graph
 UTILITY_SDIR =	$(SDIR)/utility
 SORT_SDIR =		$(SDIR)/sort
+VPATH = $(SDIR) $(GRAPH_SDIR) $(UTILITY_SDIR) $(SORT_SDIR)
 
 _DEPS = libft.h get_next_line.h ft_printf.h
 DEPS = $(addprefix $(IDIR)/,$(_DEPS))
@@ -65,16 +66,10 @@ OBJ :=	$(addprefix $(ODIR)/,$(_OBJ)) \
 
 all: $(NAME)
 
-$(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
+$(ODIR)/%.o: %.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
 $(ODIR)/%.o: $(PRINTF_SDIR)/%.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS) -Wno-varargs
-$(ODIR)/%.o: $(GRAPH_SDIR)/%.c $(DEPS)
-		$(CC) -c -o $@ $< $(CFLAGS)
-$(ODIR)/%.o: $(UTILITY_SDIR)/%.c $(DEPS)
-		$(CC) -c -o $@ $< $(CFLAGS)
-$(ODIR)/%.o: $(SORT_SDIR)/%.c $(DEPS)
-		$(CC) -c -o $@ $< $(CFLAGS)
 
 $(OBJ): | $(ODIR)
 
