@@ -67,9 +67,9 @@ uintmax_t	pf_u_cast(va_list ap, int length, int base, int *len)
 	else if (!(length % 5))
 		a = va_arg(ap, uintmax_t);
 	else if (!(length % 11))
-		a = va_arg(ap, unsigned char);
+		a = (unsigned char)va_arg(ap, int);
 	else if (!(length % 2))
-		a = va_arg(ap, unsigned short int);
+		a = (unsigned short int)va_arg(ap, int);
 	else
 		*len = -1;
 	if (*len != -1)

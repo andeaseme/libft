@@ -21,7 +21,6 @@ static int	put0x(void)
 int			pf_p(t_pmod *p, va_list ap)
 {
 	uintmax_t	a;
-	int			space;
 	int			len;
 	int			plen;
 
@@ -35,7 +34,6 @@ int			pf_p(t_pmod *p, va_list ap)
 		p->prec = p->width;
 	plen = (p->prec > len || (!(p->prec) && !a)) ? p->prec : len;
 	(!(p->flag % 5) && put0x()) ? pf_putunbr(a, p, len) : 0;
-	space = 0;
 	plen = pf_putspace(plen, p) + 2;
 	((p->flag % 5) && put0x()) ? pf_putunbr(a, p, len) : 0;
 	return ((plen > p->width) ? plen : p->width);

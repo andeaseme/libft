@@ -31,13 +31,11 @@ static void	op128_illegal(char *file, char *ops, char *usage, char c)
 
 int			*ft_option128(int *ac, char ***av, char *valid_ops, char *usage_in)
 {
-	int		i;
 	int		j;
 	int		*op;
 	char	*filename;
 
 	filename = ft_strrchr(*av[0], '/') + 1;
-	i = 0;
 	if ((op = (int *)ft_strnew(sizeof(int) * 4 - 1)) && *ac > 1)
 	{
 		while (*(*av + 1) && (*(*av + 1))[0] == '-' && (*(*av + 1))[1] != 0)
@@ -47,7 +45,7 @@ int			*ft_option128(int *ac, char ***av, char *valid_ops, char *usage_in)
 			j = 0;
 			if (!ft_strcmp(**av, "--"))
 				break ;
-			while (++j && (**av)[j] > 0 && (**av)[j] <= 127)
+			while (++j && (**av)[j] > 0)
 			{
 				if (valid_ops && !ft_strchr(valid_ops, (int)(**av)[j]))
 					op128_illegal(filename, valid_ops, usage_in, (**av)[j]);

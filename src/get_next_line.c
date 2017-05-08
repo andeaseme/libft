@@ -61,7 +61,7 @@ static int		gnl_getline(const int fd, char **line, void **text)
 	char	*n_chr;
 	char	*buf;
 	int		ret;
-	int		nidx;
+	size_t	nidx;
 
 	buf = ft_strnew(BUFF_SIZE + 1);
 	*line = NULL;
@@ -70,7 +70,7 @@ static int		gnl_getline(const int fd, char **line, void **text)
 	{
 		if (*text && ((n_chr = ft_strchr(*text, '\n')) || ret == 0))
 		{
-			nidx = n_chr ? n_chr - (char *)(*text) : ft_strlen(*text);
+			nidx = n_chr ? (size_t)((void *)n_chr - *text) : ft_strlen(*text);
 			*line = ft_strsub(*text, 0, nidx);
 			*text = gnl_strcutend(*text, n_chr ? n_chr + 1 : 0);
 			ret = 1;

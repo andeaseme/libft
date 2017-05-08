@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdarg.h>
+# include <inttypes.h>
 
 # define MAX(a, b)		(((a) > (b)) ? (a) : (b))
 # define MIN(a, b)		(((a) < (b)) ? (a) : (b))

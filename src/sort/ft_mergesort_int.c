@@ -21,7 +21,7 @@ static t_list	*ms_lstmerge(t_list *a, t_list *b)
 		return (b);
 	else if (b == NULL)
 		return (a);
-	if ((int)a->content <= (int)b->content)
+	if (*(int *)a->content <= *(int *)b->content)
 	{
 		result = a;
 		result->next = ms_lstmerge(a->next, b);

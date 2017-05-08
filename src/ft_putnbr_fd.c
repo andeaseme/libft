@@ -19,22 +19,19 @@ void	ft_putnbr_fd(int nb, int fd)
 	char	revstr[10];
 
 	i = 0;
-	if (nb >= -2147483648 && nb <= 2147483647)
+	if (nb < 0)
+		ft_putchar_fd('-', fd);
+	if (nb == 0)
+		ft_putchar_fd('0', fd);
+	while (nb != 0)
 	{
-		if (nb < 0)
-			ft_putchar_fd('-', fd);
-		if (nb == 0)
-			ft_putchar_fd('0', fd);
-		while (nb != 0)
-		{
-			mod = nb % 10;
-			if (mod < 0)
-				mod *= -1;
-			revstr[i] = mod;
-			nb /= 10;
-			i++;
-		}
-		while (--i != -1)
-			ft_putchar_fd(revstr[i] + '0', fd);
+		mod = nb % 10;
+		if (mod < 0)
+			mod *= -1;
+		revstr[i] = mod;
+		nb /= 10;
+		i++;
 	}
+	while (--i != -1)
+		ft_putchar_fd(revstr[i] + '0', fd);
 }

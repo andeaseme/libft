@@ -20,7 +20,7 @@ static void	*pf_c_cast(va_list ap, int length, int *len, int spec)
 	if (spec == 14 && (*len = 1))
 		a[0] = 37;
 	else if (length == 1 && (*len = 1))
-		a[0] = va_arg(ap, char);
+		a[0] = (char)va_arg(ap, int);
 	else if (length == 3)
 		*len = pf_wctoc(va_arg(ap, wchar_t), a);
 	return (a);
