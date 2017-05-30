@@ -22,7 +22,7 @@ PRINTF_SDIR =	$(SDIR)/ft_printf
 GRAPH_SDIR =	$(SDIR)/graph
 UTILITY_SDIR =	$(SDIR)/utility
 SORT_SDIR =		$(SDIR)/sort
-VPATH = $(SDIR) $(GRAPH_SDIR) $(UTILITY_SDIR) $(SORT_SDIR)
+vpath %.c $(SDIR) $(GRAPH_SDIR) $(UTILITY_SDIR) $(SORT_SDIR) $(PRINTF_SDIR)
 
 _DEPS = libft.h get_next_line.h ft_printf.h
 DEPS = $(addprefix $(IDIR)/,$(_DEPS))
@@ -68,27 +68,25 @@ all: $(NAME)
 
 $(ODIR)/%.o: %.c $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS)
-$(ODIR)/%.o: $(PRINTF_SDIR)/%.c $(DEPS)
-		$(CC) -c -o $@ $< $(CFLAGS) -Wno-varargs
 
 $(OBJ): | $(ODIR)
 
 $(ODIR):
 		mkdir -p $@
-		@echo 'make directory obj'
+		@echo 'make directory $@'
 
 $(NAME): $(OBJ)
 		ar rc $@ $^
 		ranlib $@
-		@echo 'compile libft.a'
+		@echo 'compile $@'
 
 clean:
 		/bin/rm -rfv $(ODIR)
-		@echo 'clean libft objects'
+		@echo '$@ $(NAME) $(ODIR)'
 
 fclean: clean
 		/bin/rm -f $(NAME) 
-		@echo 'clean libft.a'
+		@echo '$@ $(NAME)'
 
 re: fclean all
 
