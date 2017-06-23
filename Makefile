@@ -14,7 +14,7 @@ NAME =	libft.a
 
 IDIR = includes/
 CC = gcc
-CFLAGS = -I $(IDIR) -Wall -Wextra -Werror
+CFLAGS = -I $(IDIR) -Wall -Wextra -Werror -g
 
 ODIR := obj
 SDIR = src

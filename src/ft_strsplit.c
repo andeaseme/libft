@@ -40,7 +40,7 @@ static int	ap_charcount(int position, const char *s, char c)
 	int i;
 
 	i = position;
-	while (s[i] != c)
+	while (s[i] != c && s[i] != 0)
 		i++;
 	return (i - position);
 }
